@@ -192,8 +192,7 @@ class OpenDataHTTPHandler(http.server.BaseHTTPRequestHandler):
                 "projeto": "API OpenData BR",
                 "descricao": "API REST aberta do Calendário Brasileiro 2026 (Feriados, Pontos Facultativos, Datas Comemorativas e Fases da Lua).",
                 "versao": "1.0.0",
-                "fonte": "Calendarr Brasil (https://www.calendarr.com/brasil/)",
-                "documentacao_interativa": "/docs",
+                                "documentacao_interativa": "/docs",
                 "especificacao_openapi": "/openapi.json",
                 "endpoints_principais": {
                     "health": "/api/v1/health",

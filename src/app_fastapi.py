@@ -38,7 +38,7 @@ class DataItem(BaseModel):
     titulo: str = Field(..., description="Título do feriado ou celebração")
     tipo: str = Field(..., description="Tipo (feriado_nacional, ponto_facultativo, comemorativa, campanha)")
     categoria: str = Field(..., description="Categoria temática")
-    fonte: str = Field(..., description="Link da fonte original")
+    fonte: Optional[str] = Field(None, description="Referência ou metadado adicional")
 
 class PaginacaoResponse(BaseModel):
     total: int

@@ -201,8 +201,7 @@ class OpenDataRepository:
         total_dias_uteis = sum(m["dias_uteis"] for m in self.meses)
         return {
             "ano": 2026,
-            "fonte": "Calendarr Brasil (https://www.calendarr.com/brasil/)",
-            "total_eventos_cadastrados": len(self.datas),
+                        "total_eventos_cadastrados": len(self.datas),
             "distribuicao_por_tipo": tipos,
             "total_fases_lunares_registradas": len(self.fases_lua),
             "total_meses": len(self.meses),

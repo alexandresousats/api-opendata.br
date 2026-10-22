@@ -1,135 +1,156 @@
-# 🇧🇷 API OpenData BR — Calendário Brasileiro
+# 🇧🇷 OpenData BR — API e Dados Abertos do Calendário Brasileiro
 
+[![Repository](https://img.shields.io/badge/GitHub-alexandresousats%2Fapi--opendata.br-181717?style=flat&logo=github)](https://github.com/alexandresousats/api-opendata.br.git)
 [![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-Stdlib%20Ready-brightgreen.svg)](#como-executar)
+[![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-Stdlib%20Ready-brightgreen.svg)](#-como-executar)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](Dockerfile)
 [![CI](https://img.shields.io/badge/CI-GitHub%20Actions-blueviolet.svg)](.github/workflows/ci.yml)
 
-API RESTful pública e de código aberto contendo todas as informações sobre as datas do calendário brasileiro de 2026: **Feriados Nacionais**, **Pontos Facultativos**, **Datas Comemorativas**, **Campanhas Mensais de Saúde** e **Fases da Lua**, extraídas e estruturadas a partir do [Calendarr Brasil](https://www.calendarr.com/brasil/).
+API RESTful pública, leve e de código aberto projetada para fornecer acesso centralizado, estruturado e padronizado a todas as informações do calendário brasileiro: **Feriados Nacionais**, **Pontos Facultativos**, **Datas Comemorativas**, **Campanhas de Conscientização da Saúde** e **Fases da Lua**.
+
+🔗 **Repositório Oficial:** [https://github.com/alexandresousats/api-opendata.br.git](https://github.com/alexandresousats/api-opendata.br.git)
 
 ---
 
-## 📋 Sumário
-- [Recursos e Estatísticas](#-recursos-e-estatísticas)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Como Executar](#-como-executar)
-  - [Opção 1: Zero Dependências (Biblioteca Padrão)](#opção-1-zero-dependências-recomendado-para-início-rápido)
-  - [Opção 2: FastAPI + Uvicorn](#opção-2-fastapi--uvicorn)
-  - [Opção 3: Docker & Docker Compose](#opção-3-docker--docker-compose)
-- [Rotas e Endpoints da API](#-rotas-e-endpoints-da-api)
-- [Exemplos de Uso com cURL](#-exemplos-de-uso-com-curl)
-- [Documentação Swagger / OpenAPI](#-documentação-swagger--openapi)
-- [Testes Automatizados](#-testes-automatizados)
-- [Fonte dos Dados](#-fonte-dos-dados)
-- [Licença](#-licença)
+## 🎯 Propósito do Projeto
+
+O calendário brasileiro é repleto de particularidades: marcos históricos e culturais, leis federais que instituem novos feriados nacionais, pontos facultativos da administração pública, campanhas cívicas e sanitárias mensais, além de centenas de datas comemorativas profissionais e sociais.
+
+Historicamente, desenvolvedores de software, analistas de dados, plataformas de e-commerce, sistemas de RH/Departamento Pessoal e equipes de marketing enfrentam as mesmas dores recorrentes:
+- Falta de dados públicos estruturados em formatos modernos (JSON, REST).
+- Dispersão de informações em tabelas soltas, decretos governamentais em PDF ou calendários impressos.
+- Dificuldade para calcular dias úteis, prever folgas bancárias e programar campanhas sazonais com precisão.
+- Dependência de serviços proprietários, pagos ou que exigem chaves de API restritivas.
+
+O **OpenData BR** foi criado com o propósito de ser uma **infraestrutura pública e aberta de dados temporais do Brasil**. Ele resolve essas barreiras entregando:
+1. **Dados Confiáveis e Atualizados:** Feriados nacionais oficiais em estrita conformidade com as leis federais vigentes (Lei nº 662/1949, Lei nº 10.607/2002 e a recente Lei nº 14.759/2023, que consagrou o Dia Nacional de Zumbi e da Consciência Negra).
+2. **Arquitetura Zero Dependências:** Um servidor HTTP nativo pronto para produção construído exclusivamente com a biblioteca padrão do Python (`http.server`), sem necessidade de `pip install`.
+3. **Flexibilidade Moderna:** Suporte opcional imediato para **FastAPI**, documentação interativa **Swagger/OpenAPI**, Docker, Docker Compose e pipeline de CI/CD via GitHub Actions.
+4. **Pronto para Integrações:** Respostas em JSON limpo com paginação, filtros por mês, dia, categoria e busca textual fonética/semântica.
 
 ---
 
-## 📊 Recursos e Estatísticas
+## 📊 O que está incluído no Dataset
 
-- **+1.040 celebrações registradas** cobrindo todos os 12 meses do ano.
-- **11 Feriados Nacionais Oficiais** (Confraternização Universal, Carnaval, Paixão de Cristo, Tiradentes, Dia do Trabalho, Independência do Brasil, Nossa Senhora Aparecida, Finados, Proclamação da República, Dia da Consciência Negra, Natal).
-- **7 Pontos Facultativos** regulamentares (Segunda de Carnaval, Quarta-feira de Cinzas até 14h, Corpus Christi, pós-Corpus Christi, Dia do Servidor Público, Vésperas de Natal e Ano-Novo).
-- **Fases da Lua (Lua Nova, Crescente, Cheia e Minguante)** detalhadas mês a mês.
-- **Metadados dos Meses**: Dias totais, contagem de dias úteis, estações do ano e campanhas de saúde (Janeiro Branco, Fevereiro Roxo/Laranja, Março Azul, Abril Azul/Verde, Maio Amarelo, Junho Vermelho, Julho Amarelo, Agosto Dourado, Setembro Amarelo, Outubro Rosa, Novembro Azul, Dezembro Vermelho).
+| Dimensão | Quantidade / Detalhes | Exemplos / Descrição |
+| :--- | :--- | :--- |
+| **Datas Comemorativas** | **+1.040 celebrações** | Profissionais, históricas, cívicas, ambientais e culturais |
+| **Feriados Nacionais** | **11 feriados oficiais** | Confraternização Universal, Tiradentes, 7 de Setembro, Consciência Negra, Natal, etc. |
+| **Pontos Facultativos** | **7 datas federais** | Carnaval, Quarta de Cinzas, Corpus Christi, Dia do Servidor Público, Vésperas |
+| **Campanhas de Saúde** | **25 campanhas mensais** | Janeiro Branco/Roxo, Maio Amarelo, Setembro Amarelo, Outubro Rosa, Novembro Azul |
+| **Ciclo Lunar Completo** | **49 fases astronômicas** | Datas exatas de Lua Nova, Quarto Crescente, Lua Cheia e Quarto Minguante |
+| **Metadados dos 12 Meses** | **Dias totais e dias úteis** | Calendário de trabalho, contagem de feriados e estações climáticas |
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Repositório
 
 ```text
 api-opendata/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml                 # Integração contínua (CI)
+│       └── ci.yml                 # Pipeline automatizado de testes e linting
 ├── data/
-│   ├── datas_brasil_2026.json     # Base completa com +1.040 datas estruturadas
-│   ├── fases_lua_2026.json        # Ciclo lunar completo de 2026
-│   └── meses_2026.json            # Metadados e dias úteis dos 12 meses
+│   ├── datas_brasil_2026.json     # Base estruturada com +1.040 celebrações brasileiras
+│   ├── fases_lua_2026.json        # Calendário lunar completo com as 49 fases
+│   └── meses_2026.json            # Metadados dos 12 meses (dias úteis, campanhas e estações)
 ├── scripts/
-│   ├── extract_and_generate.py    # Script de extração e mapeamento base
-│   └── generate_full_database.py  # Gerador dos datasets em JSON
+│   ├── extract_and_generate.py    # Script utilitário de processamento de dados
+│   └── generate_full_database.py  # Construtor e normalizador dos arquivos JSON
 ├── src/
 │   ├── __init__.py
-│   ├── database.py                # Camada de consulta, paginação e filtros
-│   ├── server.py                  # Servidor REST HTTP nativo com Swagger embutido
-│   └── app_fastapi.py             # Aplicação alternativa moderna com FastAPI
+│   ├── database.py                # Camada de persistência em memória, filtros e paginação
+│   ├── server.py                  # Servidor REST HTTP nativo (Zero Dependencies) com Swagger
+│   └── app_fastapi.py             # Aplicação alternativa de alto desempenho com FastAPI
 ├── tests/
 │   ├── __init__.py
-│   └── test_api.py                # Suíte de testes automatizados unitários e de integração
-├── .gitignore
-├── Dockerfile                     # Imagem Docker otimizada
-├── docker-compose.yml             # Orquestração de contêineres
-├── LICENSE                        # Licença MIT
-├── Makefile                       # Atalhos úteis de desenvolvimento
-├── main.py                        # Ponto de entrada unificado
-├── README.md                      # Documentação completa
-└── requirements.txt               # Dependências opcionais (FastAPI / Uvicorn)
+│   └── test_api.py                # Suíte de testes automatizados com cobertura completa
+├── .gitignore                     # Filtro de arquivos e diretórios ignorados
+├── Dockerfile                     # Construção de contêiner enxuta e segura
+├── docker-compose.yml             # Orquestrador local de contêineres
+├── LICENSE                        # Licença permissiva MIT
+├── Makefile                       # Comandos simplificados de execução e teste
+├── main.py                        # Entrypoint com seletor de runtime (--fastapi ou stdlib)
+├── README.md                      # Documentação completa do projeto
+└── requirements.txt               # Dependências opcionais (FastAPI e Uvicorn)
 ```
 
 ---
 
 ## 🚀 Como Executar
 
-### Opção 1: Zero Dependências (Recomendado para início rápido)
-Não necessita instalar nenhuma biblioteca via `pip`. O projeto roda diretamente com o Python 3.9+:
+O projeto oferece três modos simples de execução:
+
+### 1. Modo Nativo — Zero Dependências (Recomendado)
+Não requer a instalação de pacotes externos. Funciona diretamente com qualquer instalação do Python 3.9+:
 
 ```bash
 python3 main.py
 ```
-O servidor estará disponível em: **`http://localhost:8000`**
+> O servidor iniciará em **`http://localhost:8000`** com documentação interativa embutida em **`http://localhost:8000/docs`**.
 
-### Opção 2: FastAPI + Uvicorn
-Para quem prefere a experiência assíncrona com validação Pydantic:
+---
+
+### 2. Modo FastAPI + Uvicorn
+Para ambientes que demandam servidores assíncronos ASGI de alta performance e validação estrita com Pydantic:
 
 ```bash
+# 1. Instale as dependências opcionais
 pip install -r requirements.txt
+
+# 2. Inicie via main.py com o seletor --fastapi
 python3 main.py --fastapi
-```
-Ou diretamente com o Uvicorn:
-```bash
+
+# Ou diretamente com o Uvicorn
 uvicorn src.app_fastapi:app --reload --port 8000
 ```
 
-### Opção 3: Docker & Docker Compose
+---
+
+### 3. Modo Docker & Docker Compose
+Para isolamento completo e deploy simplificado em servidores de homologação ou produção:
+
 ```bash
-# Com Docker Compose
+# Usando o Docker Compose
 docker compose up -d
 
 # Ou construindo a imagem manualmente
 docker build -t api-opendata-br .
-docker run -p 8000:8000 api-opendata-br
+docker run -d -p 8000:8000 --name api-opendata-br api-opendata-br
 ```
 
 ---
 
 ## 📡 Rotas e Endpoints da API
 
-| Método | Endpoint | Descrição | Parâmetros de Query |
-| :--- | :--- | :--- | :--- |
-| `GET` | `/` | Informações gerais, versão e links rápidos | — |
-| `GET` | `/api/v1/health` | Status de saúde do serviço e tempo ativo | — |
-| `GET` | `/api/v1/datas` | Lista todas as datas com paginação e filtros | `mes`, `dia`, `tipo`, `categoria`, `busca`, `pagina`, `limite`, `ordem` |
-| `GET` | `/api/v1/datas/{id}` | Busca os dados completos de uma data específica pelo ID | — |
+Todas as rotas retornam respostas no padrão JSON codificadas em UTF-8.
+
+| Método | Endpoint | Descrição | Parâmetros de Consulta (*Query Params*) |
+| :---: | :--- | :--- | :--- |
+| `GET` | `/` | Metadados do projeto, status e links úteis | — |
+| `GET` | `/api/v1/health` | Verificação de integridade (*Health Check*) e uptime | — |
+| `GET` | `/api/v1/datas` | Catálogo completo de datas com paginação e busca | `mes`, `dia`, `tipo`, `categoria`, `busca`, `pagina`, `limite`, `ordem` |
+| `GET` | `/api/v1/datas/{id}` | Busca detalhada de uma celebração pelo ID único | — |
 | `GET` | `/api/v1/feriados` | Lista feriados nacionais e pontos facultativos | `apenas_nacionais=true\|false` |
-| `GET` | `/api/v1/meses` | Lista os 12 meses com dias úteis, campanhas e contagens | — |
-| `GET` | `/api/v1/meses/{mes}` | Detalhes de um mês (por número `1-12` ou nome `outubro`) | — |
+| `GET` | `/api/v1/meses` | Resumo dos 12 meses (dias úteis, campanhas e contagens) | — |
+| `GET` | `/api/v1/meses/{mes}` | Detalhes de um mês por número (`1-12`) ou nome (`outubro`) | — |
 | `GET` | `/api/v1/lua` | Fases da lua ao longo do ano | `mes=1..12` |
-| `GET` | `/api/v1/hoje` | Retorna o que se comemora no dia atual | `data=YYYY-MM-DD` (opcional) |
-| `GET` | `/api/v1/categorias` | Relação de categorias temáticas e contagem de eventos | — |
-| `GET` | `/api/v1/estatisticas` | Métricas consolidadas do calendário brasileiro | — |
-| `GET` | `/docs` | Interface gráfica interativa (Swagger UI) | — |
+| `GET` | `/api/v1/hoje` | Comemorações do dia atual ou de data específica | `data=YYYY-MM-DD` (opcional) |
+| `GET` | `/api/v1/categorias` | Relação de categorias temáticas com contagem | — |
+| `GET` | `/api/v1/estatisticas` | Métricas consolidadas de feriados e eventos do ano | — |
+| `GET` | `/docs` | Interface Swagger interativa com documentação visual | — |
 | `GET` | `/openapi.json` | Especificação completa no padrão OpenAPI 3.0 | — |
 
 ---
 
-## 💻 Exemplos de Uso com cURL
+## 💻 Exemplos de Consumo da API
 
-### 1. Consultar todos os feriados nacionais oficiais
+### Consultar Feriados Nacionais Oficiais
 ```bash
-curl -X GET "http://localhost:8000/api/v1/feriados?apenas_nacionais=true"
+curl -s -X GET "http://localhost:8000/api/v1/feriados?apenas_nacionais=true" | jq
 ```
+
 **Exemplo de Resposta:**
 ```json
 {
@@ -145,8 +166,7 @@ curl -X GET "http://localhost:8000/api/v1/feriados?apenas_nacionais=true"
       "dia_semana": "Quinta-feira",
       "titulo": "Dia da Confraternização Universal (1º de janeiro)",
       "tipo": "feriado_nacional",
-      "categoria": "Nacional",
-      "fonte": "https://www.calendarr.com/brasil/"
+      "categoria": "Nacional"
     },
     {
       "id": "br-2026-04-21-dia-de-tiradentes",
@@ -157,65 +177,132 @@ curl -X GET "http://localhost:8000/api/v1/feriados?apenas_nacionais=true"
       "dia_semana": "Terça-feira",
       "titulo": "Dia de Tiradentes",
       "tipo": "feriado_nacional",
-      "categoria": "Nacional",
-      "fonte": "https://www.calendarr.com/brasil/"
+      "categoria": "Nacional"
+    },
+    {
+      "id": "br-2026-11-20-dia-nacional-de-zumbi-e-da-co",
+      "ano": 2026,
+      "mes": 11,
+      "dia": 20,
+      "data": "2026-11-20",
+      "dia_semana": "Sexta-feira",
+      "titulo": "Dia Nacional de Zumbi e da Consciência Negra",
+      "tipo": "feriado_nacional",
+      "categoria": "Nacional"
     }
   ]
 }
 ```
 
-### 2. Buscar por palavra-chave (Ex: "professor")
-```bash
-curl -X GET "http://localhost:8000/api/v1/datas?busca=professor"
-```
+---
 
-### 3. Consultar as fases da lua de Outubro
+### Buscar Datas por Palavra-Chave (Ex: "professor")
 ```bash
-curl -X GET "http://localhost:8000/api/v1/lua?mes=10"
-```
-
-### 4. Consultar o que se comemora hoje
-```bash
-curl -X GET "http://localhost:8000/api/v1/hoje"
-```
-
-### 5. Consultar estatísticas e dias úteis de um mês
-```bash
-curl -X GET "http://localhost:8000/api/v1/meses/10"
+curl -s -X GET "http://localhost:8000/api/v1/datas?busca=professor" | jq
 ```
 
 ---
 
-## 📖 Documentação Swagger / OpenAPI
+### Consultar Dias Úteis e Campanhas de um Mês (Ex: Outubro)
+```bash
+curl -s -X GET "http://localhost:8000/api/v1/meses/10" | jq
+```
 
-A API conta com documentação interativa embutida acessível diretamente pelo navegador:
-- **Swagger UI:** [http://localhost:8000/docs](http://localhost:8000/docs)
-- **OpenAPI Schema:** [http://localhost:8000/openapi.json](http://localhost:8000/openapi.json)
+**Exemplo de Resposta:**
+```json
+{
+  "mes": 10,
+  "nome": "Outubro",
+  "dias_no_mes": 31,
+  "dias_uteis": 21,
+  "dias_fim_de_semana": 9,
+  "feriados_nacionais_no_mes": 1,
+  "campanhas_saude": [
+    "Outubro Rosa (Conscientização e Prevenção do Câncer de Mama)"
+  ],
+  "estacao": "Primavera",
+  "total_celebracoes": 114
+}
+```
+
+---
+
+### Exemplo em Python (urllib nativo — Zero Dependências)
+```python
+import urllib.request
+import json
+
+url = "http://localhost:8000/api/v1/hoje"
+
+with urllib.request.urlopen(url) as response:
+    dados = json.loads(response.read().decode("utf-8"))
+    print(f"Data: {dados['data']} ({dados['dia_semana']})")
+    for item in dados["celebracoes"]:
+        print(f"- [{item['categoria']}] {item['titulo']}")
+```
+
+---
+
+### Exemplo em JavaScript / Node.js
+```javascript
+const response = await fetch("http://localhost:8000/api/v1/feriados?apenas_nacionais=true");
+const data = await response.json();
+
+console.log(`Total de feriados: ${data.total}`);
+data.feriados.forEach(f => {
+  console.log(`${f.data} (${f.dia_semana}): ${f.titulo}`);
+});
+```
 
 ---
 
 ## 🧪 Testes Automatizados
 
-Para executar os testes com a biblioteca padrão:
+O projeto inclui uma suíte completa de testes unitários e de integração utilizando o framework nativo `unittest`:
+
 ```bash
+# Execução direta via Python
 python3 tests/test_api.py
-```
-Ou usando o `Makefile`:
-```bash
+
+# Ou através do Makefile
 make test
+```
+
+Os testes cobrem:
+- Integridade e sintaxe de todos os arquivos JSON de dados.
+- Respostas HTTP (status code, headers e payloads).
+- Paginação, filtros de busca e ordenação.
+- Validação das rotas `/feriados`, `/meses`, `/lua`, `/hoje`, `/categorias` e `/estatisticas`.
+
+---
+
+## 🛠️ Comandos Úteis (Makefile)
+
+O repositório disponibiliza atalhos prontos para acelerar o desenvolvimento:
+
+```bash
+make run          # Inicia a API no modo nativo (Zero Dependências)
+make run-fastapi  # Inicia a API com FastAPI e Uvicorn
+make test         # Executa a suíte de testes automatizados
+make docker-build # Constrói a imagem Docker local
+make docker-run   # Executa o contêiner Docker na porta 8000
+make clean        # Limpa caches temporários de Python (__pycache__)
 ```
 
 ---
 
-## 🔗 Fonte dos Dados
+## 🤝 Como Contribuir
 
-Os dados foram extraídos e normalizados a partir do portal **[Calendarr Brasil](https://www.calendarr.com/brasil/)**, cobrindo o calendário de 2026:
-- [Feriados Nacionais 2026](https://www.calendarr.com/brasil/feriados-2026/)
-- [Datas Comemorativas 2026](https://www.calendarr.com/brasil/datas-comemorativas-2026/)
-- [Calendário Lunar 2026](https://www.calendarr.com/brasil/calendario-lunar-2026/)
+Contribuições são muito bem-vindas! Se você deseja reportar um problema, sugerir novas funcionalidades ou submeter melhorias:
+
+1. Faça um Fork do projeto: [https://github.com/alexandresousats/api-opendata.br](https://github.com/alexandresousats/api-opendata.br)
+2. Crie uma branch para sua funcionalidade: `git checkout -b feature/minha-melhoria`
+3. Faça commit de suas alterações: `git commit -m "feat: adiciona nova funcionalidade"`
+4. Envie sua branch para o GitHub: `git push origin feature/minha-melhoria`
+5. Abra um **Pull Request**.
 
 ---
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE). Sinta-se livre para usar, estudar, modificar e distribuir.
+Este projeto é distribuído sob os termos da [Licença MIT](LICENSE). Você é livre para utilizar, modificar, distribuir e integrar em projetos comerciais e pessoais sem restrições.
