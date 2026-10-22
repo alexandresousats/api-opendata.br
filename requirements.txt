@@ -1,0 +1,5 @@
+# Dependências para execução opcional com FastAPI e Uvicorn
+# O projeto também funciona com ZERO dependências usando a biblioteca padrão do Python (python3 main.py)
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+pydantic>=2.0.0

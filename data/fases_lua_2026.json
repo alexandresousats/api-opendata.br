@@ -1,0 +1,352 @@
+[
+  {
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "dia": 3,
+    "data": "2026-01-03",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "dia": 10,
+    "data": "2026-01-10",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "dia": 18,
+    "data": "2026-01-18",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "dia": 26,
+    "data": "2026-01-26",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "dia": 1,
+    "data": "2026-02-01",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "dia": 9,
+    "data": "2026-02-09",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "dia": 17,
+    "data": "2026-02-17",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "dia": 24,
+    "data": "2026-02-24",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 3,
+    "mes_nome": "Março",
+    "dia": 3,
+    "data": "2026-03-03",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 3,
+    "mes_nome": "Março",
+    "dia": 11,
+    "data": "2026-03-11",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 3,
+    "mes_nome": "Março",
+    "dia": 18,
+    "data": "2026-03-18",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 3,
+    "mes_nome": "Março",
+    "dia": 25,
+    "data": "2026-03-25",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 4,
+    "mes_nome": "Abril",
+    "dia": 1,
+    "data": "2026-04-01",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 4,
+    "mes_nome": "Abril",
+    "dia": 10,
+    "data": "2026-04-10",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 4,
+    "mes_nome": "Abril",
+    "dia": 17,
+    "data": "2026-04-17",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 4,
+    "mes_nome": "Abril",
+    "dia": 23,
+    "data": "2026-04-23",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 5,
+    "mes_nome": "Maio",
+    "dia": 1,
+    "data": "2026-05-01",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 5,
+    "mes_nome": "Maio",
+    "dia": 9,
+    "data": "2026-05-09",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 5,
+    "mes_nome": "Maio",
+    "dia": 16,
+    "data": "2026-05-16",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 5,
+    "mes_nome": "Maio",
+    "dia": 23,
+    "data": "2026-05-23",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 5,
+    "mes_nome": "Maio",
+    "dia": 31,
+    "data": "2026-05-31",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 6,
+    "mes_nome": "Junho",
+    "dia": 8,
+    "data": "2026-06-08",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 6,
+    "mes_nome": "Junho",
+    "dia": 14,
+    "data": "2026-06-14",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 6,
+    "mes_nome": "Junho",
+    "dia": 21,
+    "data": "2026-06-21",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 6,
+    "mes_nome": "Junho",
+    "dia": 29,
+    "data": "2026-06-29",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 7,
+    "mes_nome": "Julho",
+    "dia": 7,
+    "data": "2026-07-07",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 7,
+    "mes_nome": "Julho",
+    "dia": 14,
+    "data": "2026-07-14",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 7,
+    "mes_nome": "Julho",
+    "dia": 21,
+    "data": "2026-07-21",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 7,
+    "mes_nome": "Julho",
+    "dia": 29,
+    "data": "2026-07-29",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "dia": 5,
+    "data": "2026-08-05",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "dia": 12,
+    "data": "2026-08-12",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "dia": 19,
+    "data": "2026-08-19",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "dia": 28,
+    "data": "2026-08-28",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "dia": 4,
+    "data": "2026-09-04",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "dia": 11,
+    "data": "2026-09-11",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "dia": 18,
+    "data": "2026-09-18",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "dia": 26,
+    "data": "2026-09-26",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "dia": 3,
+    "data": "2026-10-03",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "dia": 10,
+    "data": "2026-10-10",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "dia": 18,
+    "data": "2026-10-18",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "dia": 26,
+    "data": "2026-10-26",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "dia": 1,
+    "data": "2026-11-01",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "dia": 9,
+    "data": "2026-11-09",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "dia": 17,
+    "data": "2026-11-17",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "dia": 24,
+    "data": "2026-11-24",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "dia": 1,
+    "data": "2026-12-01",
+    "fase": "Lua Minguante"
+  },
+  {
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "dia": 8,
+    "data": "2026-12-08",
+    "fase": "Lua Nova"
+  },
+  {
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "dia": 17,
+    "data": "2026-12-17",
+    "fase": "Lua Crescente"
+  },
+  {
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "dia": 23,
+    "data": "2026-12-23",
+    "fase": "Lua Cheia"
+  },
+  {
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "dia": 30,
+    "data": "2026-12-30",
+    "fase": "Lua Minguante"
+  }
+]

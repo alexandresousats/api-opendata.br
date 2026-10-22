@@ -1,0 +1,269 @@
+[
+  {
+    "numero": 1,
+    "nome": "Janeiro",
+    "dias_totais": 31,
+    "dias_uteis": 21,
+    "campanhas_saude": [
+      {
+        "nome": "Janeiro Branco",
+        "tema": "Saúde Mental",
+        "periodo": "1 a 31 de janeiro"
+      },
+      {
+        "nome": "Janeiro Roxo",
+        "tema": "Conscientização sobre a Hanseníase",
+        "periodo": "1 a 31 de janeiro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Dia da Confraternização Universal (1º de janeiro)"
+    ]
+  },
+  {
+    "numero": 2,
+    "nome": "Fevereiro",
+    "dias_totais": 28,
+    "dias_uteis": 20,
+    "campanhas_saude": [
+      {
+        "nome": "Fevereiro Roxo",
+        "tema": "Lúpus, Alzheimer e Fibromialgia",
+        "periodo": "1 a 28 de fevereiro"
+      },
+      {
+        "nome": "Fevereiro Laranja",
+        "tema": "Combate à Leucemia",
+        "periodo": "1 a 28 de fevereiro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Carnaval (terça-feira)"
+    ],
+    "pontos_facultativos": [
+      "Segunda-feira de Carnaval",
+      "Quarta-feira de Cinzas (até 14h)"
+    ]
+  },
+  {
+    "numero": 3,
+    "nome": "Março",
+    "dias_totais": 31,
+    "dias_uteis": 22,
+    "campanhas_saude": [
+      {
+        "nome": "Março Azul-Marinho",
+        "tema": "Prevenção ao Câncer Colorretal",
+        "periodo": "1 a 31 de março"
+      },
+      {
+        "nome": "Março Vermelho",
+        "tema": "Conscientização do Câncer Renal",
+        "periodo": "1 a 31 de março"
+      }
+    ],
+    "estacao": "Início do Outono (20 de março)"
+  },
+  {
+    "numero": 4,
+    "nome": "Abril",
+    "dias_totais": 30,
+    "dias_uteis": 20,
+    "campanhas_saude": [
+      {
+        "nome": "Abril Azul",
+        "tema": "Conscientização sobre o Autismo",
+        "periodo": "1 a 30 de abril"
+      },
+      {
+        "nome": "Abril Verde",
+        "tema": "Saúde e Segurança no Trabalho",
+        "periodo": "1 a 30 de abril"
+      }
+    ],
+    "feriados_nacionais": [
+      "Sexta-feira Santa (Paixão de Cristo)",
+      "Dia de Tiradentes (21 de abril)"
+    ]
+  },
+  {
+    "numero": 5,
+    "nome": "Maio",
+    "dias_totais": 31,
+    "dias_uteis": 20,
+    "campanhas_saude": [
+      {
+        "nome": "Maio Amarelo",
+        "tema": "Segurança e Conscientização no Trânsito",
+        "periodo": "1 a 31 de maio"
+      },
+      {
+        "nome": "Maio Cinza",
+        "tema": "Combate ao Câncer Cerebral",
+        "periodo": "1 a 31 de maio"
+      },
+      {
+        "nome": "Maio Laranja",
+        "tema": "Combate ao Abuso e Exploração Sexual Infantil",
+        "periodo": "1 a 31 de maio"
+      },
+      {
+        "nome": "Maio Roxo",
+        "tema": "Doenças Inflamatórias Intestinais",
+        "periodo": "1 a 31 de maio"
+      }
+    ],
+    "feriados_nacionais": [
+      "Dia do Trabalho (1º de maio)"
+    ]
+  },
+  {
+    "numero": 6,
+    "nome": "Junho",
+    "dias_totais": 30,
+    "dias_uteis": 22,
+    "campanhas_saude": [
+      {
+        "nome": "Junho Vermelho",
+        "tema": "Incentivo à Doação de Sangue",
+        "periodo": "1 a 30 de junho"
+      },
+      {
+        "nome": "Junho Verde",
+        "tema": "Proteção do Meio Ambiente",
+        "periodo": "1 a 30 de junho"
+      }
+    ],
+    "pontos_facultativos": [
+      "Corpus Christi (4 de junho)",
+      "Ponto Facultativo após Corpus Christi (5 de junho)"
+    ],
+    "estacao": "Início do Inverno (21 de junho)"
+  },
+  {
+    "numero": 7,
+    "nome": "Julho",
+    "dias_totais": 31,
+    "dias_uteis": 23,
+    "campanhas_saude": [
+      {
+        "nome": "Julho Amarelo",
+        "tema": "Luta contra as Hepatites Virais",
+        "periodo": "1 a 31 de julho"
+      },
+      {
+        "nome": "Julho Verde",
+        "tema": "Prevenção do Câncer de Cabeça e Pescoço",
+        "periodo": "1 a 31 de julho"
+      }
+    ]
+  },
+  {
+    "numero": 8,
+    "nome": "Agosto",
+    "dias_totais": 31,
+    "dias_uteis": 21,
+    "campanhas_saude": [
+      {
+        "nome": "Agosto Dourado",
+        "tema": "Incentivo ao Aleitamento Materno",
+        "periodo": "1 a 31 de agosto"
+      },
+      {
+        "nome": "Agosto Verde-Claro",
+        "tema": "Combate ao Linfoma",
+        "periodo": "1 a 31 de agosto"
+      }
+    ]
+  },
+  {
+    "numero": 9,
+    "nome": "Setembro",
+    "dias_totais": 30,
+    "dias_uteis": 21,
+    "campanhas_saude": [
+      {
+        "nome": "Setembro Amarelo",
+        "tema": "Prevenção do Suicídio e Saúde Mental",
+        "periodo": "1 a 30 de setembro"
+      },
+      {
+        "nome": "Setembro Verde",
+        "tema": "Incentivo à Doação de Órgãos",
+        "periodo": "1 a 30 de setembro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Dia da Independência do Brasil (7 de setembro)"
+    ],
+    "estacao": "Início da Primavera (22 de setembro)"
+  },
+  {
+    "numero": 10,
+    "nome": "Outubro",
+    "dias_totais": 31,
+    "dias_uteis": 21,
+    "campanhas_saude": [
+      {
+        "nome": "Outubro Rosa",
+        "tema": "Prevenção e Diagnóstico Precoce do Câncer de Mama",
+        "periodo": "1 a 31 de outubro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Dia de Nossa Senhora Aparecida (12 de outubro)"
+    ],
+    "pontos_facultativos": [
+      "Dia do Servidor Público (28 de outubro)"
+    ]
+  },
+  {
+    "numero": 11,
+    "nome": "Novembro",
+    "dias_totais": 30,
+    "dias_uteis": 19,
+    "campanhas_saude": [
+      {
+        "nome": "Novembro Azul",
+        "tema": "Conscientização sobre Câncer de Próstata e Diabetes",
+        "periodo": "1 a 30 de novembro"
+      },
+      {
+        "nome": "Novembro Roxo",
+        "tema": "Sensibilização para a Prematuridade",
+        "periodo": "1 a 30 de novembro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Finados (2 de novembro)",
+      "Proclamação da República (15 de novembro)",
+      "Dia Nacional de Zumbi e da Consciência Negra (20 de novembro)"
+    ]
+  },
+  {
+    "numero": 12,
+    "nome": "Dezembro",
+    "dias_totais": 31,
+    "dias_uteis": 22,
+    "campanhas_saude": [
+      {
+        "nome": "Dezembro Vermelho",
+        "tema": "Prevenção e Luta contra o HIV/AIDS",
+        "periodo": "1 a 31 de dezembro"
+      },
+      {
+        "nome": "Dezembro Laranja",
+        "tema": "Combate e Prevenção ao Câncer de Pele",
+        "periodo": "1 a 31 de dezembro"
+      }
+    ],
+    "feriados_nacionais": [
+      "Natal (25 de dezembro)"
+    ],
+    "pontos_facultativos": [
+      "Véspera de Natal (24 de dezembro, após 13h)",
+      "Véspera de Ano-Novo (31 de dezembro, após 13h)"
+    ],
+    "estacao": "Início do Verão (21 de dezembro)"
+  }
+]
